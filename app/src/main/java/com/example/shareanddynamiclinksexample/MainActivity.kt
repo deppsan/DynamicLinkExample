@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
             FirebaseApp.initializeApp(applicationContext)
             Firebase.dynamicLinks.shortLinkAsync {
-                val baseUrl = "mioxxo.com"
+                val baseUrl = "https://www.mioxxo.com"
                 val PATH_SEGMENT = "/cupones_segment"
                 val LINKS_URL_PREFIX = "https://shareanddynamiclinksexample.page.link"
 
