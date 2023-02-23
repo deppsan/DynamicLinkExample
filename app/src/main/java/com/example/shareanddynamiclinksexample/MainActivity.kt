@@ -20,21 +20,18 @@ class MainActivity : AppCompatActivity() {
 
         btnButton.setOnClickListener {
 
-            //FirebaseApp.initializeApp(this)
+            FirebaseApp.initializeApp(applicationContext)
             Firebase.dynamicLinks.shortLinkAsync {
-                val baseUrl = "http://www.baseUrl.com"
+                val baseUrl = "mioxxo.com"
                 val PATH_SEGMENT = "/cupones_segment"
-                val LINKS_URL_PREFIX = "http://example.page.link"
+                val LINKS_URL_PREFIX = "https://shareanddynamiclinksexample.page.link"
 
                 link = Uri.parse("${baseUrl + PATH_SEGMENT}")
                 domainUriPrefix = LINKS_URL_PREFIX
-                iosParameters("") {
-                    appStoreId = ""
-                }
                 androidParameters { }
                 socialMetaTagParameters {
-                    title = "Titulo que se vera al compartir"
-                    description = "Descripcion que se vera al compartir"
+                    title = ""
+                    description = ""
                     imageUrl = Uri.parse("") //Imagen metadata al compartir
                 }
             }.addOnSuccessListener {
